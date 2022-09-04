@@ -1,0 +1,3 @@
+/home/kevin/Escritorio/Tarea-Corta-D2/cmake-build-debug/CMakeFiles/Tarea_Corta_D2.dir
+/home/kevin/Escritorio/Tarea-Corta-D2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kevin/Escritorio/Tarea-Corta-D2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
