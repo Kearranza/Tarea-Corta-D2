@@ -29,7 +29,7 @@ jobs:
       run: date
         
     - name: probando quicksort
-      run: quicksort([1,2,3,4,5,6], 0, 5)
+      run: quickSort([1,2,3,4,5,6] , 0 , 5)
     
    
       
