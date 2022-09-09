@@ -3,12 +3,12 @@
 #include<iostream>
 #include <fstream>
 #include <bits/stdc++.h>
+#include <algorithm>
 
 using namespace std;
 
-//vector lista enla.
 
-
+//Funciones que ayudan a la captura de lo escrito en la linea de comandos
 char* getCmdOption(char ** begin, char ** end, const std::string & option)
 {
     char ** itr = std::find(begin, end, option);
@@ -16,7 +16,7 @@ char* getCmdOption(char ** begin, char ** end, const std::string & option)
     {
         return *itr;
     }
-    return 0;
+    return nullptr;
 }
 
 bool cmdOptionExists(char** begin, char** end, const std::string& option)
@@ -24,6 +24,56 @@ bool cmdOptionExists(char** begin, char** end, const std::string& option)
     return std::find(begin, end, option) != end;
 }
 
+//Insertion Sort
+//https://www.geeksforgeeks.org/insertion-sort/
+// Function to sort an array using
+// insertion sort
+void insertionSort(int arr[], int n)
+{
+    int i, key, j;
+    for (i = 1; i < n; i++)
+    {
+        key = arr[i];
+        j = i - 1;
+
+        // Move elements of arr[0..i-1],
+        // that are greater than key, to one
+        // position ahead of their
+        // current position
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+//Selection Sort
+//https://www.programiz.com/dsa/selection-sort
+// function to swap the position of two elements
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void selectionSort(int array[], int size) {
+    for (int step = 0; step < size - 1; step++) {
+        int min_idx = step;
+        for (int i = step + 1; i < size; i++) {
+
+            // To sort in descending order, change > to < in this line.
+            // Select the minimum element in each loop.
+            if (array[i] < array[min_idx])
+                min_idx = i;
+        }
+
+        // put min at the correct position
+        swap(&array[min_idx], &array[step]);
+    }
+}
+
+//Quick Sort
 //rearrange the elements to get the actual pivot index
 int partition(int arr[], int low, int high, int pivot){
     int PIndex = low;
@@ -58,10 +108,8 @@ void quickSort(int arr[], int low, int high){
     }
 }
 
-
-
 int main(int argc, char* argv[]){
-    string nombreArchivo="archivo.txt";
+    string nombreArchivo="archivo1KB.txt";
     string ordenamiento="QS";
     string nombreArchivoSalida="archivo_resuelto.txt";
 
@@ -82,21 +130,18 @@ int main(int argc, char* argv[]){
             return 0;
         }
 
+
         nombreArchivo = getCmdOption(argv, argv + argc, "-i");
         nombreArchivoSalida = getCmdOption(argv, argv + argc, "-o");
         ordenamiento = getCmdOption(argv, argv + argc, "-a");
     }
-
+/* // codigo para generar archivo con numeros aleatorios (cambiar el 256 de acuerdo a la cantidad deseada)
     int num;
-    fstream archivo;
-
+    ofstream archivo;
     archivo.open(nombreArchivo);
 
-
-
     srand(time(nullptr));
-
-    for(int c = 1; c <= 10; c++)
+    for(int c = 1; c <= 256; c++)
     {
         num = 1 + rand() % (10000 - 1);
         if (c==1){
@@ -105,32 +150,37 @@ int main(int argc, char* argv[]){
             archivo << ',' <<num ;
         }
     }
-    archivo.close();
+
+    archivo.close();*/
+
+    ifstream archivo;
     archivo.open(nombreArchivo);
     int n;
     int i=0;
     char c;
-    int arr[10];
+    int arr[256];
     while(archivo.good()){
-
         archivo >> n >> c;
-        cout << n<< " ";
         arr[i]=n;
         i++;
-
     }
 
-    quickSort(arr,0,9);
-    cout<<"The sorted array is: ";
+    if (ordenamiento == "QS"){
+        quickSort(arr,0,255);
+    }else if(ordenamiento == "IS"){
+        insertionSort(arr,255);
+    }else if(ordenamiento == "SS"){
+        selectionSort(arr,255);
+    }
+
     ofstream archivoSalida;
     archivoSalida.open(nombreArchivoSalida);
-    for( int i = 0 ; i < 10;i++){
+    for( int i = 0 ; i < 255;i++){
         if (i==0){
             archivoSalida << arr[i];
         }else{
             archivoSalida << ',' <<arr[i] ;
         }
-        cout<< arr[i]<<",";
     }
 
     return 0;
