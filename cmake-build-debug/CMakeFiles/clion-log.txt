@@ -1,4 +1,4 @@
-/home/duesan/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/duesan/Documentos/Tarea-Corta-D2 -B /home/duesan/Documentos/Tarea-Corta-D2/cmake-build-debug
+/snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/204/bin/ninja/linux/ninja -G Ninja -S /home/kevin/Escritorio/Tarea-Corta-D2 -B /home/kevin/Escritorio/Tarea-Corta-D2/cmake-build-debug
 -- The C compiler identification is GNU 11.2.0
 -- The CXX compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/duesan/Documentos/Tarea-Corta-D2/cmake-build-debug
+-- Build files have been written to: /home/kevin/Escritorio/Tarea-Corta-D2/cmake-build-debug

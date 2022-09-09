@@ -6,7 +6,7 @@
 #define TAREA_CORTA_D2_PAGEDARRAY_H
 
 
-class PagedArray {
+/*class PagedArray {
 public:
     void newPage(){
 
@@ -26,6 +26,6 @@ private:
 
 
 }
-;
+;*/
 
 #endif //TAREA_CORTA_D2_PAGEDARRAY_H

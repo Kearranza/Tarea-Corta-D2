@@ -1,13 +1,17 @@
 # ninja log v5
-1	9	1662255124608527425	CMakeFiles/Tarea_Corta_D2.dir/Sorts/Quick_Sort.cpp.o	62d43aa0b311e772
-1	732	1662245230974185373	CMakeFiles/Tarea_Corta_D2.dir/Insertion_Sort.cpp.o	a4e2b2a256552dc8
-1	189	1662245230434174420	CMakeFiles/Tarea_Corta_D2.dir/Selection_Sort.cpp.o	a2c4cb4fbdae8ad7
-1	19	1662700562162184061	build.ninja	948d2ebd1a05ac6c
-1	740	1662255463522873319	CMakeFiles/Tarea_Corta_D2.dir/main.cpp.o	8ad5746408240b5d
-1	719	1662244523099726967	CMakeFiles/Tarea_Corta_D2.dir/Quick_Sort.cpp.o	793ac5c4a7167624
+1	19	1662704335889898919	build.ninja	948d2ebd1a05ac6c
 869	933	1662697063781081004	Tarea_Corta_D2	2c6a7dbb264eb8fe
 1	10	1662245516871198788	CMakeFiles/Tarea_Corta_D2.dir/PagedArray.cpp.o	3681c49bc7233738
-2	832	1662254908799175865	CMakeFiles/Tarea_Corta_D2.dir/Sorts/Insertion_Sort.cpp.o	6f71fde239dc1efa
-0	184	1662245476293636876	CMakeFiles/Tarea_Corta_D2.dir/Sorts/Selection_Sort.cpp.o	35b9d801cb4d02a8
 1	869	1662697063717081295	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
-1	9	1662245476117630242	CMakeFiles/Tarea_Corta_D2.dir/Sorts/PagedArray.cpp.o	3056d5e53eebcb06
+0	32	1662704335889898919	build.ninja	948d2ebd1a05ac6c
+1	1381	1662704337273880853	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
+1	10	1662704380609314984	CMakeFiles/Tarea_Corta_D2.dir/PagedArray.cpp.o	3681c49bc7233738
+10	85	1662704380685313991	Tarea_Corta_D2	2c6a7dbb264eb8fe
+1	966	1662704416804842097	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
+966	1044	1662704416880841104	Tarea_Corta_D2	2c6a7dbb264eb8fe
+1	938	1662704436684582281	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
+938	1018	1662704436764581235	Tarea_Corta_D2	2c6a7dbb264eb8fe
+1	993	1662704443956487226	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
+993	1062	1662704444024486338	Tarea_Corta_D2	2c6a7dbb264eb8fe
+0	976	1662704452048381444	CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o	4b75455bb3293f
+976	1042	1662704452112380608	Tarea_Corta_D2	2c6a7dbb264eb8fe

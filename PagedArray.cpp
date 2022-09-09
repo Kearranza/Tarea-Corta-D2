@@ -3,7 +3,7 @@
 //
 
 #include "PagedArray.h"
-
+/*
 PagedArray{
     int numOfPages=0;
     int[]* page1=(int) malloc(sizeof(int)*256);
@@ -11,7 +11,6 @@ PagedArray{
     delete(page1);
 
     lastArray=void;
-
   void newPage(){
         if (numOfPages<6){
             this.numOfPages ++;
@@ -80,4 +79,4 @@ PagedArray{
   }
 
 
-};
+}*/

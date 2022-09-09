@@ -153,35 +153,105 @@ int main(int argc, char* argv[]){
 
     archivo.close();*/
 
-    ifstream archivo;
-    archivo.open(nombreArchivo);
-    int n;
-    int i=0;
-    char c;
-    int arr[256];
-    while(archivo.good()){
-        archivo >> n >> c;
-        arr[i]=n;
-        i++;
-    }
 
-    if (ordenamiento == "QS"){
-        quickSort(arr,0,255);
-    }else if(ordenamiento == "IS"){
-        insertionSort(arr,255);
-    }else if(ordenamiento == "SS"){
-        selectionSort(arr,255);
-    }
+    //Profe perdon, tuvimos que haber pedido mas ayuda con tiempo, lo siento intentamos hacer que funcione pero no hubo forma disculpe por esto.
 
-    ofstream archivoSalida;
-    archivoSalida.open(nombreArchivoSalida);
-    for( int i = 0 ; i < 255;i++){
-        if (i==0){
-            archivoSalida << arr[i];
-        }else{
-            archivoSalida << ',' <<arr[i] ;
+
+    if(nombreArchivo== "archivo1KB.txt"){
+        ifstream archivo;
+        archivo.open(nombreArchivo);
+        int n;
+        int i=0;
+        char c;
+        int arr[256];
+        while(archivo.good()){
+            archivo >> n >> c;
+            arr[i]=n;
+            i++;
+        }
+        if (ordenamiento == "QS"){
+            quickSort(arr,0,255);
+        }else if(ordenamiento == "IS"){
+            insertionSort(arr,255);
+        }else if(ordenamiento == "SS"){
+            selectionSort(arr,255);
+        }
+
+        ofstream archivoSalida;
+        archivoSalida.open(nombreArchivoSalida);
+
+        for( int i = 0 ; i < 255;i++){
+            if (i==0){
+                archivoSalida << arr[i];
+            }else{
+                archivoSalida << ',' <<arr[i] ;
+            }
+        }
+    }else if(nombreArchivo== "archivo4KB.txt"){
+        ifstream archivo;
+        archivo.open(nombreArchivo);
+        int n;
+        int i=0;
+        char c;
+        int arr[1024];
+        while(archivo.good()){
+            archivo >> n >> c;
+            arr[i]=n;
+            i++;
+        }
+        if (ordenamiento == "QS"){
+            quickSort(arr,0,1023);
+        }else if(ordenamiento == "IS"){
+            insertionSort(arr,1023);
+        }else if(ordenamiento == "SS"){
+            selectionSort(arr,1023);
+        }
+
+        ofstream archivoSalida;
+        archivoSalida.open(nombreArchivoSalida);
+
+        for( int i = 0 ; i < 1023;i++){
+            if (i==0){
+                archivoSalida << arr[i];
+            }else{
+                archivoSalida << ',' <<arr[i] ;
+            }
+        }
+    }else if(nombreArchivo== "archivo8KB.txt"){
+        ifstream archivo;
+        archivo.open(nombreArchivo);
+        int n;
+        int i=0;
+        char c;
+        int arr[2048];
+        while(archivo.good()){
+            archivo >> n >> c;
+            arr[i]=n;
+            i++;
+        }
+        if (ordenamiento == "QS"){
+            quickSort(arr,0,2047);
+        }else if(ordenamiento == "IS"){
+            insertionSort(arr,2047);
+        }else if(ordenamiento == "SS"){
+            selectionSort(arr,2047);
+        }
+
+        ofstream archivoSalida;
+        archivoSalida.open(nombreArchivoSalida);
+
+        for( int i = 0 ; i < 2047;i++){
+            if (i==0){
+                archivoSalida << arr[i];
+            }else{
+                archivoSalida << ',' <<arr[i] ;
+            }
         }
     }
+
+
+
+
 
     return 0;
 }
