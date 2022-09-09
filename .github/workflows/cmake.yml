@@ -23,7 +23,8 @@ jobs:
     
     - name: Setup C/C++ Compiler
       uses: rlalik/setup-cpp-compiler@v1.1
-
+    - name: Compilando
+      run: sudo apt-get -y update , sudo apt-get -y upgrade , sudo apt-get install build-essential 
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
@@ -34,7 +35,8 @@ jobs:
       run: date
         
     - name: probando quicksort
-      run: quickSort([1,2,3,4,5,6] , 0 , 5)
+      run: g++ -o quickSort Quick-Sort.cpp
+      
     
    
       
