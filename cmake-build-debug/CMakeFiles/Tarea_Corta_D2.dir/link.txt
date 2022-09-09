@@ -1,0 +1,1 @@
+/usr/bin/c++ -g "CMakeFiles/Tarea_Corta_D2.dir/paged-sorted.cpp.o" CMakeFiles/Tarea_Corta_D2.dir/Sorts/Quick_Sort.cpp.o CMakeFiles/Tarea_Corta_D2.dir/Sorts/Selection_Sort.cpp.o CMakeFiles/Tarea_Corta_D2.dir/Sorts/Insertion_Sort.cpp.o CMakeFiles/Tarea_Corta_D2.dir/PagedArray.cpp.o -o Tarea_Corta_D2 
