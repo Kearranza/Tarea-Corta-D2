@@ -6,15 +6,17 @@
 
 PagedArray{
     int numOfPages=0;
-    int[] page1=(int) malloc(sizeof(int)*256);
-    int[]* pagesArray= (int[]*) malloc(sizeof(page)*6);
+    int[]* page1=(int) malloc(sizeof(int)*256);
+    int[]* pagesArray= (int[]*) malloc(sizeof(page1)*6);
+    delete(page1);
+
     lastArray=void;
 
-  int newPage(){
+  void newPage(){
         if (numOfPages<6){
             this.numOfPages ++;
             new int[] page=(int) malloc(sizeof(int)*256);
-            new pageptr* = &page;
+            new ptr*pageptr = &page;
             pagesArray+=pageptr
         }
     }
@@ -50,11 +52,17 @@ PagedArray{
             if (breaked==true){
                 break;
             }
+            else if(numOfPages<6){
+                newPage();
+                i++;
+            }
+
             else{
                 i++;
                 if(i>=6){
                     changeValue(num);
                 }
+
             }
         }
 
@@ -72,4 +80,4 @@ PagedArray{
   }
 
 
-}
+};
